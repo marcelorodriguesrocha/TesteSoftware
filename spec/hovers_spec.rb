@@ -7,7 +7,7 @@ describe 'Mouse Hover', :hovers do
     end
 
     it 'Quando passo o mouse no Blade' do
-        card = find ('img[alt=Blade]')
+        card = find ('img[alt*=Blade]')
         card.hover
 
         expect(page).to have_content 'Nome: Blade'
@@ -21,7 +21,7 @@ describe 'Mouse Hover', :hovers do
     end
 
     it 'Quando passo o mouse sobre o Homem Aranha' do
-        card = find ('img[alt="Homem Aranha"]')
+        card = find ('img[alt$=Aranha]')
         card.hover 
 
         expect(page).to have_content 'Nome: Homem Aranha'
