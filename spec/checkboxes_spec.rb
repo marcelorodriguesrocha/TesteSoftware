@@ -1,4 +1,4 @@
-
+# caixa de seleção
 
 describe ' Caixa de seleção ', :checkbox do
     

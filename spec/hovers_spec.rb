@@ -1,4 +1,4 @@
-# houver -> Quando voce passa o mouse por cima da imagem aparece o nome.
+# houver -> Quando voce passa o mouse por cima da imagem aparece o nome..
 
 describe 'Mouse Hover', :hovers do
     

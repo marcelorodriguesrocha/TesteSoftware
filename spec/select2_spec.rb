@@ -1,4 +1,4 @@
-
+#caixa de seleção
 
 
 describe 'Select2', :select2 do

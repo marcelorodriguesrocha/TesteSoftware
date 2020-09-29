@@ -1,4 +1,4 @@
-
+# teste
 
 describe "Meu primeiro script" do  # Bloco da swiht de teste
     it "Visitar a página" do       # Bloco do caso de teste
