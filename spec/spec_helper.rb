@@ -23,7 +23,9 @@ RSpec.configure do |config|
 end
 
 Capybara.configure do |config|
-  config.default_driver = :selenium  # ou :selenium_chrome para usar o google chrome
+  config.default_driver = :selenium_chrome_headless  # ou :selenium_chrome para usar o google chrome
   config.default_max_wait_time = 5 # o Capybara tem até 5 seg para encontrar um elemento.
 end
   #
+
+  ### headless -> faz os teste sem abrir o navegador web ##
