@@ -1,4 +1,5 @@
-#formularios
+
+#  salva em uma pasta log as telas de testes ##
 
 describe 'Meu primeiro script' do
     it 'Visitar página' do
@@ -22,7 +23,7 @@ describe 'forms' do
 
        expect(find('#flash')).to have_content 'Olá, Tony Stark. Você acessou a área logada!'
 
-        
+        page.save_screenshot('log/login_com_sucesso.png')
 
     end
 
@@ -38,7 +39,7 @@ describe 'forms' do
 
         #page.driver.browser.switch_to.alert.accept
 
-        
+        page.save_screenshot('log/senha_incorreta.png')
         
     end
 
@@ -52,8 +53,8 @@ describe 'forms' do
 
         expect(find('#flash')).to have_content 'O usuário informado não está cadastrado!'
         
-        
+        #page.driver.browser.switch_to.alert.accept
 
-        
+        page.save_screenshot('log/usuario_nao_cadastrado.png')
     end
 end  
