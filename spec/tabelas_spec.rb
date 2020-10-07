@@ -37,23 +37,24 @@ describe 'Tabelas', :tabs do
         expect(insta).to eql '@teamcevans'
     end
 
-    it 'Deve selecionar Chris prat para remoção' do
+    it 'Deve selecionar chris prat para remoção' do
         prat = find('table tbody tr', text: 'Chris Pratt')
         prat.find('a', text: 'delete').click 
       
         msg = page.driver.browser.switch_to.alert.text
         expect(msg).to eql 'Chris Pratt foi selecionado para remoção!'
-        
+        page.driver.browser.switch_to.alert.accept
 
     end
 
-    it 'Deve selecionar Chris prat para edição' do
+    it 'Deve selecionar chris prat para edição' do
         prat = find('table tbody tr', text: 'Chris Pratt')
         prat.find('a', text: 'edit').click 
-        sleep 3
+       
         msg = page.driver.browser.switch_to.alert.text
         expect(msg).to eql 'Chris Pratt foi selecionado para edição!'
-        sleep 3
+        page.driver.browser.switch_to.alert.accept # O Capybara não consegue obter screenshots de alerts de javascript :(  
+
     end
     
 end

@@ -23,7 +23,7 @@ describe 'forms' do
 
        expect(find('#flash')).to have_content 'Olá, Tony Stark. Você acessou a área logada!'
 
-        page.save_screenshot('log/login_com_sucesso.png')
+        
 
     end
 
@@ -39,7 +39,7 @@ describe 'forms' do
 
         #page.driver.browser.switch_to.alert.accept
 
-        page.save_screenshot('log/senha_incorreta.png')
+        
         
     end
 
@@ -55,6 +55,11 @@ describe 'forms' do
         
         #page.driver.browser.switch_to.alert.accept
 
-        page.save_screenshot('log/usuario_nao_cadastrado.png')
+        
     end
+
+    after(:each) do |e| # É o exemplo de cada teste (expect)
+       
+    end
+
 end  

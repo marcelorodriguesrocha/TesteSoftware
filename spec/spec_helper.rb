@@ -20,6 +20,12 @@ RSpec.configure do |config|
   config.shared_context_metadata_behavior = :apply_to_host_groups
 
   config.include Capybara::DSL
+
+  config.after(:example) do |e|
+    nome = e.description.gsub(/[^A-Za-z0-9 ]/, '').tr(' ', '_') # tira todo os espação e acentos das palavras
+    page.save_screenshot('log/'+nome+'.png')
+  end
+
 end
 
 Capybara.configure do |config|
