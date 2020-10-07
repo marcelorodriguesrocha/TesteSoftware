@@ -3,7 +3,7 @@
 describe ' Caixa de seleção ', :checkbox do
     
     before(:each) do # para todos os it vai se acessado o site pelo visit 
-        visit 'https://training-wheels-protocol.herokuapp.com/checkboxes'
+        visit '/checkboxes'
     end
 
     it 'Marcando uma seleção' do

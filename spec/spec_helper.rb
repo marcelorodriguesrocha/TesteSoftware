@@ -26,11 +26,18 @@ RSpec.configure do |config|
     page.save_screenshot('log/'+nome+'.png')
   end
 
+  config.before(:example) do # deixa todos os teste com 1280 x 800 de resolução
+    page.current_window.resize_to(1280, 800)
+  end
+
+
 end
 
 Capybara.configure do |config|
-  config.default_driver = :selenium_chrome_headless  # ou :selenium_chrome para usar o google chrome
-  config.default_max_wait_time = 5 # o Capybara tem até 5 seg para encontrar um elemento.
+  config.default_driver = :selenium #_chrome_headless  # ou :selenium_chrome para usar o google chrome
+  config.default_max_wait_time = 15 # o Capybara tem até 5 seg para encontrar um elemento.
+  config.app_host = 'https://training-wheels-protocol.herokuapp.com'
+
 end
   #
 

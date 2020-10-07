@@ -10,7 +10,7 @@ end
 describe 'forms' do
     
     it 'Login com sucesso' do
-        visit 'https://training-wheels-protocol.herokuapp.com/login'
+        visit '/login'
 
         fill_in 'username', with: 'stark' # click dentro da caixa nome e deppois click inspecionar para ver o codigo. 
         fill_in 'password', with: 'jarvis!'
@@ -28,7 +28,7 @@ describe 'forms' do
     end
 
     it 'Senha incorreta', :temp do
-        visit 'https://training-wheels-protocol.herokuapp.com/login'
+        visit '/login'
 
         fill_in 'userId', with: 'stark'
         fill_in 'password', with: 'xpto123'
@@ -44,7 +44,7 @@ describe 'forms' do
     end
 
     it 'Usuario não cadastrado' do
-        visit 'https://training-wheels-protocol.herokuapp.com/login'
+        visit '/login'
 
         fill_in 'userId', with: 'hulk'
         fill_in 'password', with: 'xpto123'

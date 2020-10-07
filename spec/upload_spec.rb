@@ -4,7 +4,7 @@ describe 'Upload', :upload do
     
     before(:each) do
 
-        visit 'https://training-wheels-protocol.herokuapp.com/upload'
+        visit '/upload'
         @arquivo = Dir.pwd + '/spec/fixtures/arquivo.txt' # retorna o diretorio na qual o projeto esta sendo executado
         @logotipo = Dir.pwd + '/spec/fixtures/logotipo.png'
     end
