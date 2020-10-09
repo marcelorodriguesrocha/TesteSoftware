@@ -23,7 +23,7 @@ RSpec.configure do |config|
 
   config.after(:example) do |e|
     nome = e.description.gsub(/[^A-Za-z0-9 ]/, '').tr(' ', '_') # tira todo os espação e acentos das palavras
-    page.save_screenshot('log/'+nome+'.png')
+    page.save_screenshot('log/'+nome+'.png') if e.exception # exception -> para mostrar apenas os teste que falharam
   end
 
   config.before(:example) do # deixa todos os teste com 1280 x 800 de resolução
